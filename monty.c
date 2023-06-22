@@ -68,6 +68,8 @@ int main(int argc, char *argv[])
     	instruction.f = swap;
 	else if (strcmp(instruction.opcode, "nop") == 0)
     	instruction.f = nop;
+	else if (strcmp(instruction.opcode, "add") == 0)
+    	instruction.f = add;
 	else
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_number
