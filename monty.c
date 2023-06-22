@@ -70,6 +70,12 @@ int main(int argc, char *argv[])
     	instruction.f = nop;
 	else if (strcmp(instruction.opcode, "add") == 0)
     	instruction.f = add;
+	else if (strcmp(instruction.opcode, "sub") == 0)
+    	instruction.f = sub;
+	else if (strcmp(instruction.opcode, "div") == 0)
+		instruction.f = div_stack;
+	else if (strcmp(instruction.opcode, "mul") == 0)
+		instruction.f = mul;
 	else
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_number
